@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #EFF3F5;
+  background-color: #eff3f5;
+  font-family: montserrat;
 }
 
 .header-wrap {
@@ -10,7 +11,7 @@ body {
   box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  color: #1D1D28;
+  color: #1d1d28;
   display: flex;
 }
 .header-wrap .search-wrap {
@@ -36,15 +37,12 @@ body {
 }
 .header-wrap .search-wrap .search-box input::-moz-placeholder {
   font-style: normal;
-  /* identical to box height */
 }
 .header-wrap .search-wrap .search-box input:-ms-input-placeholder {
   font-style: normal;
-  /* identical to box height */
 }
 .header-wrap .search-wrap .search-box input::placeholder {
   font-style: normal;
-  /* identical to box height */
 }
 .header-wrap .logo-wrap {
   padding: 0.8em;
@@ -66,4 +64,48 @@ body {
   .logo-wrap h5 {
     display: none;
   }
+}
+.container-login {
+  padding: 5% 20%;
+}
+.container-login .mob-ray {
+  display: flex;
+}
+.container-login .mob-ray .mobile img {
+  width: 100%;
+}
+.container-login .mob-ray .login {
+  margin: auto 0;
+  position: relative;
+  right: 5em;
+}
+.container-login .mob-ray .login h3 {
+  font-family: montserrat;
+  font-size: 3em;
+  margin: 0.8em 0em;
+}
+.container-login .mob-ray .login label {
+  color: #171930;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  position: relative;
+  bottom: 0.5em;
+}
+.container-login .mob-ray .login input {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: none;
+  width: 28em;
+  padding: 1em 0.7em;
+}
+.container-login .mob-ray .login .log-btn {
+  width: 6em;
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: linear-gradient(130.97deg, #266ed7 6.68%, #4d8aeb 99.25%);
+  mix-blend-mode: normal;
+  opacity: 0.77;
+  padding: 0.5em 0.2em;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
