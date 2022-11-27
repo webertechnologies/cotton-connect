@@ -8,6 +8,9 @@
 
     <!-- css  -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- recaptcha  -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <header>
@@ -31,14 +34,28 @@
               <img src="assests/images/sample_mobile.svg" />
             </div>
             <div class="login">
-              <h3>Welcome,</h3>
-              <label>Enter Mobile No.</label>
-              <input type="text" />
-              <input class="log-btn" value="Login" type="button" />
+              <form id="login">
+                <h3>Welcome,</h3>
+                <label>Enter Mobile No.</label>
+                <input type="text" />
+                <input
+                  class="log-btn g-recaptcha"
+                  data-sitekey="6LdCMzkjAAAAAME8pX80F2QorZ2lpUTGB0jy_oFd"
+                  data-callback="onSubmit"
+                  data-action="submit"
+                  value="Login"
+                  type="submit"
+                />
+              </form>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("login").submit();
+      }
+    </script>
   </body>
 </html>
