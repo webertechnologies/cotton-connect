@@ -8,6 +8,10 @@
 
     <!-- css  -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="css/fonts.css" />
 
     <!-- recaptcha  -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -30,23 +34,41 @@
       <div class="container-login">
         <div class="login-wrap">
           <div class="mob-ray">
-            <div class="mobile">
-              <img src="assests/images/sample_mobile.svg" />
-            </div>
-            <div class="login">
-              <form id="login">
-                <h3>Welcome,</h3>
-                <label>Enter Mobile No.</label>
-                <input type="text" />
-                <input
-                  class="log-btn g-recaptcha"
-                  data-sitekey="6LdCMzkjAAAAAME8pX80F2QorZ2lpUTGB0jy_oFd"
-                  data-callback="onSubmit"
-                  data-action="submit"
-                  value="Login"
-                  type="submit"
-                />
-              </form>
+            <div class="mob-ray-wrap">
+              <div class="mobile">
+                <picture>
+                  <source
+                    media="(max-width:1400px)"
+                    srcset="assests/images/ray.svg"
+                  />
+                  <img src="assests/images/mob-ray.svg" />
+                </picture>
+                <!-- <img
+                  srcset="
+                    assests/images/ray.svg     480w,
+                    assests/images/mob-ray.svg 800w
+                  "
+                  sizes="(max-width: 1400px) 480px,
+         800px"
+                  src="assests/images/mob-ray.svg"
+                  alt="Elva dressed as a fairy"
+                /> -->
+              </div>
+              <div class="login">
+                <form id="login" method="POST">
+                  <h3 class="log-welcome">Welcome,</h3>
+                  <label>Enter Mobile No.</label>
+                  <input class="mobile-box" type="text" />
+                  <input
+                    class="log-btn g-recaptcha"
+                    data-sitekey="6LdCMzkjAAAAAME8pX80F2QorZ2lpUTGB0jy_oFd"
+                    data-callback="onSubmit"
+                    data-action="submit"
+                    value="Login"
+                    type="submit"
+                  />
+                </form>
+              </div>
             </div>
           </div>
         </div>
