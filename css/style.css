@@ -116,7 +116,7 @@ body {
   display: none;
 }
 .container.home .story-wrapper {
-  padding: 1em 1.5em;
+  padding: 1em 1.8em;
   overflow-x: scroll;
   -ms-scroll-chaining: none;
       overscroll-behavior: contain;
@@ -183,4 +183,108 @@ body {
 .container.home .story-wrapper .story-icons .story-text h5 {
   margin: 0.6em auto;
   font-weight: normal;
+}
+.container.home .post-box-wrapper {
+  max-width: 50em;
+  margin: 0 auto;
+}
+.container.home .post-box-wrapper .post-wrapper:first-child {
+  margin-top: 1.5em;
+}
+.container.home .post-box-wrapper .post-wrapper {
+  padding: 0em 1.8em;
+  margin-top: 4em;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box {
+  display: flex;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box img {
+  width: 3em;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.1));
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 15px;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box .title-box {
+  display: flex;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box .title-box .post-group {
+  margin-left: 0.8em;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box .title-box .post-group h5 {
+  color: #1d1d28;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 0.2em;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box .title-box .post-group p {
+  color: #a4a4b2;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box .post-options {
+  margin: 0 0 0 auto;
+  margin-top: 0.45em;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box .post-options img {
+  height: 24px;
+  width: 12px;
+  border: none;
+}
+.container.home .post-box-wrapper .post-wrapper .post-box .post-caption p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1d1d28;
+  line-height: 24px;
+}
+.container.home .post-box-wrapper .post-wrapper img.post {
+  border: 2px solid #ffffff;
+  filter: drop-shadow(0px 4px 20px rgba(39, 162, 195, 0.2));
+  border-radius: 20px;
+  width: 100%;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions {
+  display: flex;
+  margin-top: 1em;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions .post-action {
+  margin-left: 1.3em;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions .post-action a {
+  display: flex;
+  align-items: center;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions .post-action a img {
+  width: 1.6em;
+  height: 1.6em;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions .post-action a b {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  margin-left: 8px;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions .post-action a b.like {
+  color: #f04a4a;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions .post-action.like {
+  margin: 0;
+}
+.container.home .post-box-wrapper .post-wrapper .post-actions .post-action:last-child {
+  margin: 0 0 0 auto;
 }/*# sourceMappingURL=style.css.map */
