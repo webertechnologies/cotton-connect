@@ -15,6 +15,13 @@
 
     <!-- recaptcha  -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <!-- jQuery  -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -54,18 +61,37 @@
                   alt="Elva dressed as a fairy"
                 /> -->
               </div>
-              <div class="login">
+              <div class="login" id="login">
                 <form id="login" method="POST">
                   <h3 class="log-welcome">Welcome,</h3>
-                  <label>Enter Mobile No.</label>
-                  <input class="mobile-box" type="text" />
+                  <label id="mobile-label">Enter Mobile No.</label>
+                  <input class="mobile-box" id="mobile" type="text" />
                   <input
+                    id="verify-btn"
                     class="log-btn g-recaptcha"
                     data-sitekey="6LdCMzkjAAAAAME8pX80F2QorZ2lpUTGB0jy_oFd"
                     data-callback="onSubmit"
-                    data-action="submit"
-                    value="Login"
-                    type="submit"
+                    value="verify"
+                    type="button"
+                    onclick="send_otp()"
+                  />
+                  <label id="otp_label" style="display: none">Enter OTP</label>
+                  <i id="error-label" style="color: red; display: none"
+                    >Invalid OTP</i
+                  >
+                  <input
+                    id="otp"
+                    style="display: none"
+                    class="mobile-box"
+                    type="text"
+                  />
+                  <input
+                    id="submit_otp"
+                    style="display: none"
+                    class="log-btn"
+                    type="button"
+                    value="verify"
+                    onclick="verify()"
                   />
                 </form>
               </div>
@@ -77,6 +103,60 @@
     <script>
       function onSubmit(token) {
         document.getElementById("login").submit();
+      }
+      function verify() {
+        jQuery("#error-label").hide();
+        var otp = jQuery("#otp").val();
+        if (otp == "") {
+          jQuery("#email_error").html("I cannot see any mail here");
+        } else {
+          jQuery("#submit_otp").html("Please Wait..");
+          jQuery("#submit_otp").attr("disabled", true);
+          jQuery("#submit_otp");
+          jQuery.ajax({
+            url: "verify_otp.php",
+            type: "post",
+            data: "otp=" + otp,
+            success: function (result) {
+              if (result == "done") {
+                window.location.href = "index.html";
+              } else {
+                jQuery("#error-label").show();
+                console.log(result);
+                jQuery("#submit_otp").attr("disabled", false);
+                jQuery("#submit_otp");
+              }
+            },
+          });
+        }
+      }
+      function send_otp() {
+        var mobile = jQuery("#mobile").val();
+        if (mobile == "") {
+          jQuery("#email_error").html("I cannot see any mail here");
+        } else {
+          jQuery("#verify-btn").html("Please Wait..");
+          jQuery("#verify-btn").attr("disabled", true);
+          jQuery("#verify-btn");
+          jQuery.ajax({
+            url: "send_otp.php",
+            type: "post",
+            data: "mobile=" + mobile,
+            success: function (result) {
+              if (result == "Sent") {
+                jQuery("#mobile-label").hide();
+                jQuery("#mobile").hide();
+                jQuery("#verify-btn").hide();
+                jQuery("#otp_label").show();
+                jQuery("#otp").show();
+                jQuery("#submit_otp").show();
+                console.log(result);
+              } else {
+                console.log(result);
+              }
+            },
+          });
+        }
       }
     </script>
   </body>
