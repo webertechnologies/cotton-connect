@@ -1,0 +1,42 @@
+@media (max-width: 480px) {
+  .logo-wrap {
+    h5 {
+      display: none;
+    }
+  }
+  .log-welcome {
+    font-size: 2em !important;
+  }
+}
+@media (max-width: 1000px) {
+  .mob-ray-wrap {
+    flex-direction: column;
+  }
+  .mobile {
+    display: flex;
+    margin: 0 auto;
+    img {
+      width: 12em !important;
+    }
+  }
+  .login {
+    text-align: center;
+    right: 0 !important;
+    margin: 0 auto !important;
+    width: 100%;
+
+    .log-btn {
+      margin: 1em auto !important;
+    }
+    input.mobile-box {
+      margin: 0 auto;
+      max-width: 25em;
+      width: 100% !important;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .mob-ray-wrap {
+    margin-top: 5em !important;
+  }
+}
