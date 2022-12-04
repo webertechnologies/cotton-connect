@@ -47,17 +47,22 @@ body {
 .header-wrap .logo-wrap {
   padding: 0.8em;
   display: flex;
+  width: 100%;
 }
 .header-wrap .logo-wrap img {
   width: 2em;
   margin-right: 1em;
 }
-.header-wrap .logo-wrap h5 {
+.header-wrap .logo-wrap h5,
+.header-wrap .logo-wrap h4 {
   font-family: montserrat;
   margin: 0;
   font-size: 1.3em;
   position: relative;
   top: 0.2em;
+}
+.header-wrap .logo-wrap h4 {
+  margin: 0 auto;
 }
 
 .container-login {
@@ -110,6 +115,84 @@ body {
   opacity: 0.77;
   padding: 0.5em 0.2em;
   color: #ffffff;
+}
+
+.container.wrap {
+  max-width: 50em;
+  margin: 0 auto;
+}
+.container.wrap .chat-wrapper {
+  padding: 1em;
+}
+.container.wrap .chat-wrapper .search-chat input {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 15px;
+  width: 90%;
+  padding: 1em;
+  margin: 0 auto;
+  display: flex;
+}
+.container.wrap .chat-wrapper .title {
+  display: flex;
+  padding: 0 1em;
+}
+.container.wrap .chat-wrapper .title h5 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #484860;
+}
+.container.wrap .chat-wrapper .title img {
+  margin: 0 0 0 auto;
+}
+.container.wrap .chat-wrapper .chat.first {
+  margin-top: 0;
+}
+.container.wrap .chat-wrapper .chat {
+  padding: 0 1em;
+  margin-top: 1.2em;
+}
+.container.wrap .chat-wrapper .chat a.chat-a .wrap {
+  display: flex;
+  align-items: center;
+}
+.container.wrap .chat-wrapper .chat a.chat-a .wrap img {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.1));
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 15px;
+}
+.container.wrap .chat-wrapper .chat a.chat-a .wrap .chat-title {
+  margin-left: 0.8em;
+}
+.container.wrap .chat-wrapper .chat a.chat-a .wrap .chat-title p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a4a4b2;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  height: 1.3em;
+  width: 100%;
+  overflow: hidden;
+}
+.container.wrap .chat-wrapper .chat a.chat-a .wrap .chat-title h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1d1d28;
+}
+.container.wrap .chat-wrapper .chat a.chat-a .wrap .chat-title p,
+.container.wrap .chat-wrapper .chat a.chat-a .wrap .chat-title h5 {
+  margin: 0;
 }
 
 .container.home .story-wrapper::-webkit-scrollbar {

@@ -44,16 +44,21 @@ body {
   .logo-wrap {
     padding: 0.8em;
     display: flex;
+    width: 100%;
     img {
       width: 2em;
       margin-right: 1em;
     }
-    h5 {
+    h5,
+    h4 {
       font-family: montserrat;
       margin: 0;
       font-size: 1.3em;
       position: relative;
       top: 0.2em;
+    }
+    h4 {
+      margin: 0 auto;
     }
   }
 }
@@ -112,10 +117,93 @@ body {
   }
 }
 
+.container.wrap {
+  max-width: 50em;
+  margin: 0 auto;
+  .chat-wrapper {
+    padding: 1em;
+    .search-chat {
+      input {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 20px rgb(255 255 255 / 10%);
+        backdrop-filter: blur(4px);
+        border-radius: 15px;
+        width: 90%;
+        padding: 1em;
+        margin: 0 auto;
+        display: flex;
+      }
+    }
+    .title {
+      display: flex;
+      padding: 0 1em;
+      h5 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #484860;
+      }
+      img {
+        margin: 0 0 0 auto;
+      }
+    }
+    .chat.first {
+      margin-top: 0;
+    }
+
+    .chat {
+      padding: 0 1em;
+      margin-top: 1.2em;
+      a.chat-a {
+        .wrap {
+          display: flex;
+          align-items: center;
+          img {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #ffffff;
+            filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.1));
+            backdrop-filter: blur(4px);
+            border-radius: 15px;
+          }
+          .chat-title {
+            margin-left: 0.8em;
+            p {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: #a4a4b2;
+              flex: none;
+              order: 0;
+              flex-grow: 0;
+              height: 1.3em;
+              width: 100%;
+              overflow: hidden;
+            }
+            h5 {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              // line-height: 24px;
+              color: #1d1d28;
+            }
+            p,
+            h5 {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .container.home {
   .story-wrapper::-webkit-scrollbar {
     display: none;
   }
+
   .story-wrapper {
     padding: 1em 1.8em;
     overflow-x: scroll;
